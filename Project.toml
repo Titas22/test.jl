@@ -1,0 +1,13 @@
+name = "test"
+uuid = "ebf5cf20-b4a2-4746-a968-5bd87cb40ddb"
+authors = ["Titas Bucelis"]
+version = "0.1.0"
+
+[compat]
+julia = "1.8"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
