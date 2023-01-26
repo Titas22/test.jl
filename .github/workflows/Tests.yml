@@ -2,9 +2,11 @@ name: Tests
 on:
   push:
     branches:
-      - master
+      - main
     tags: ['*']
   pull_request:
+    branches:
+      - main
 concurrency:
   # Skip intermediate builds: always.
   # Cancel intermediate builds: only if it is a pull request build.
@@ -22,9 +24,10 @@ jobs:
           - 'nightly'
         os:
           - ubuntu-latest
+          - macOS-latest
+          - windows-latest
         arch:
           - x64
-          - x86
     steps:
       - uses: actions/checkout@v2
       - uses: julia-actions/setup-julia@v1
