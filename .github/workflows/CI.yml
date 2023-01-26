@@ -5,6 +5,8 @@ on:
       - main
     tags: ['*']
   pull_request:
+    branches:
+      - main
 concurrency:
   # Skip intermediate builds: always.
   # Cancel intermediate builds: only if it is a pull request build.
@@ -22,6 +24,8 @@ jobs:
           - 'nightly'
         os:
           - ubuntu-latest
+          - macOS-latest
+          - windows-latest
         arch:
           - x64
     steps:
